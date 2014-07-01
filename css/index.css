@@ -1,0 +1,244 @@
+body{
+	background-color: #e6e6e6;
+}
+
+h1{
+	font-size: 32px;
+	margin-bottom: 4px;
+	padding-bottom: 0px;
+	font-family: Consolas;
+}
+
+h2{
+	font-size: 40px;
+	color: #fff;
+	margin-top: 0px;
+	padding-top: 0px;
+	float: left;
+	font-family: Consolas;
+}
+
+.maincontainer{
+	margin-top: 0px;
+	padding-top: 0px;
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+.content-maincontainer{
+	padding-top: 0px;
+	margin-top: 0px;
+	margin-left: 10%;
+	margin-right: 17%;
+}
+
+.container{
+	padding-right: 20px;
+  	padding-left: 20px;
+  	padding-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+}
+
+.topbar{
+	margin-top: -5px;
+	width: 100%;
+	height: 50px;
+	background-color: #393939;
+}
+
+.navdiv{
+	float: right;
+	padding-top: 15px;
+	padding-right: 30px;
+}
+
+.navbar{
+	
+}
+
+.navbar > a{
+	color: #fff;
+	text-decoration: none;
+	font-family: Arial;
+	font-size: 20px;
+	padding-left: 20px;
+}
+
+.navbar > a:hover{
+	color:#e2bc33;
+}
+
+div#clearfix {
+	clear:both;
+	height:0;!
+}
+
+.about{
+	text-align: center;
+	float: left;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#393939,endColorStr=#e6e6e6);/*IE6*/
+	background:-moz-linear-gradient(top,#393939,#e6e6e6);/*非IE6的其它*/
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#393939), to(#e6e6e6));/*非IE6的其它*/
+	width: 220px;
+	height: 500px;
+}
+
+
+.imgbox{
+	margin-top: -20px;
+	padding-top: 0px;
+	width: 220px;
+	height: 80px;
+	text-align: center;
+}
+
+.img-circle {
+	border-radius: 50%;
+	width: 80px;
+	height: 80px;
+}
+
+.about-title{
+	padding-top: 10px;
+	font-family: 微软雅黑;
+	font-size: 16px;
+	color: #ffffff;
+}
+
+.about-text{
+	font-family: 微软雅黑;
+	font-size: 14px;
+	color: #ffffff;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+.about-connect{
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 20px;
+}
+
+.icon-link{
+	text-decoration: none;
+}
+
+.icon-weibo,
+.icon-renren{
+	height: 20px;
+}
+
+.icon-zhihu{
+	height: 22px;
+}
+
+.icon-mail{
+	width: 25px;
+	padding-bottom: 2px;
+}
+
+.content-container{
+	position: relative;
+	width: 75%;
+	margin-left: 270px;
+	height: 500px;
+}
+
+.content-title{
+	margin-top: 0px;
+	margin-bottom:30px;
+	position: relative;
+	font-family: Perpetua;
+	font-size: 60px;
+	color: #393939;
+}
+
+.journal-list{
+	padding-left: 0;
+	margin-bottom: 20px;
+}
+
+.journal-list-item{
+	position: relative;
+	display: block;
+	padding: 10px 15px;
+	margin-bottom: -1px;
+	border: 1px solid #dddddd;
+	background-color: #393939;
+	color: #e6e6e6;
+	text-decoration: none;
+	font-family: 微软雅黑;
+	font-size: 25px;
+}
+
+.journal-list-item:first-child {
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.journal-list-item:last-child {
+  margin-bottom: 0;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+a.journal-list-item:hover{
+	background-color: #e2bc33;
+	color: #393939;
+}
+
+.workview{
+	list-style-type:none
+}
+
+.workview > li{
+	width: 100%;
+	margin-bottom: 20px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #000;
+}
+
+.workview > li > img{
+	width: 70%;
+}
+
+.tip{
+	margin-top: 40px;
+	float: right;
+	position: relative;
+	display: block;
+	padding: 50px 20px;
+	width: 17%;
+	text-align: center;
+	background-color: #393939;
+	color: #e6e6e6;
+	text-decoration: none;
+	font-family: 微软雅黑;
+	font-size: 25px;
+	border-top-right-radius: 8px;
+  	border-top-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+  	border-bottom-left-radius: 8px;
+}
+
+.tip:before{
+	position: absolute;
+	border-top: 20px solid transparent;
+	border-right: 20px solid #eee;
+	border-bottom: 20px solid transparent;
+	border-right-color: #393939;
+	left: -18px;
+	top: 40px;
+	content: '';
+}
+
+.tip:hover{
+	background-color: #e2bc33;
+	color: #393939;
+}
+
+.tip:hover::before{
+	border-right-color: #e2bc33;
+}
+
