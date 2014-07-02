@@ -77,6 +77,11 @@
 	color: #393939;
 }
 
+.content-title::selection{
+	background-color: #393939;
+	color: #e6e6e6;
+}
+
 .journal-list{
 	padding-left: 0px;
 	margin-bottom: 20px;

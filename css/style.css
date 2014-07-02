@@ -3,6 +3,11 @@
 	color: #000000;
 }
 
+::-moz-selection {
+	background-color: #eeeeee;
+	color: #000000;
+}
+
 body{
 	background-color: #e6e6e6;
 	margin: 0px 0px;
@@ -17,6 +22,15 @@ h6{
 	font-family: Consolas;
 }
 
+h6 > a{
+	text-decoration: none;
+	color: #393939;
+}
+
+h6 > a:visited{
+	color: #393939;
+}
+
 h5{
 	font-size: 40px;
 	color: #fff;
@@ -25,6 +39,15 @@ h5{
 	padding-top: 0px;
 	float: left;
 	font-family: Consolas;
+}
+
+h5 > a{
+	text-decoration: none;
+	color: #fff;
+}
+
+h5 > a:visited{
+	color: #fff;
 }
 
 .maincontainer{
