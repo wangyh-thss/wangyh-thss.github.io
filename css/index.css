@@ -6,34 +6,6 @@
   font-style: normal;
 }
 
-body{
-	background-color: #e6e6e6;
-}
-
-h1{
-	font-size: 32px;
-	margin-bottom: 4px;
-	padding-bottom: 0px;
-	font-family: Consolas;
-}
-
-h2{
-	font-size: 40px;
-	color: #fff;
-	margin-top: 0px;
-	margin-bottom: 6px;
-	padding-top: 0px;
-	float: left;
-	font-family: Consolas;
-}
-
-.maincontainer{
-	overflow: hidden;
-	margin-top: 0px;
-	padding-top: 0px;
-	margin-left: 15%;
-	margin-right: 15%;
-}
 
 .content-maincontainer{
 	padding-top: 50px;
@@ -51,51 +23,15 @@ h2{
 	margin-top: 0px;
 }
 
-.topbar{
-	overflow: hidden;
-	margin-top: -5px;
-	width: 100%;
-	height: auto;
-	background-color: #393939;
-}
-
-.navdiv{
-	float: right;
-	padding-top: 15px;
-	padding-right: 30px;
-}
-
-.navbar{
-	
-}
-
-.navbar > a{
-	color: #fff;
-	text-decoration: none;
-	font-family: Arial;
-	font-size: 20px;
-	padding-left: 20px;
-}
-
-.navbar > a:hover{
-	color:#e2bc33;
-}
-
-div#clearfix {
-	clear:both;
-	height:0;!
-}
-
 .about{
 	text-align: center;
 	float: left;
-	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#393939,endColorStr=#e6e6e6);/*IE6*/
+	progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#393939,endColorStr=#e6e6e6);/*IE6*/
 	background:-moz-linear-gradient(top,#393939,#e6e6e6);/*非IE6的其它*/
 	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#393939), to(#e6e6e6));/*非IE6的其它*/
 	width: 220px;
 	height: 500px;
 }
-
 
 .imgbox{
 	margin-top: -20px;
@@ -142,7 +78,7 @@ div#clearfix {
 }
 
 .journal-list{
-	padding-left: 0;
+	padding-left: 0px;
 	margin-bottom: 20px;
 }
 
@@ -166,7 +102,7 @@ div#clearfix {
 }
 
 .journal-list-item:last-child {
-  margin-bottom: 0;
+  margin-bottom: 0px;
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
 }
@@ -229,11 +165,6 @@ a.journal-list-item:hover{
 
 .tip:hover::before{
 	border-right-color: #e2bc33;
-}
-
-.blank{
-	width: 100%;
-	height: 100px;
 }
 
 .about-conneticon{
