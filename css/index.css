@@ -21,12 +21,14 @@ h2{
 	font-size: 40px;
 	color: #fff;
 	margin-top: 0px;
+	margin-bottom: 6px;
 	padding-top: 0px;
 	float: left;
 	font-family: Consolas;
 }
 
 .maincontainer{
+	overflow: hidden;
 	margin-top: 0px;
 	padding-top: 0px;
 	margin-left: 15%;
@@ -34,7 +36,7 @@ h2{
 }
 
 .content-maincontainer{
-	padding-top: 0px;
+	padding-top: 50px;
 	margin-top: 0px;
 	margin-left: 10%;
 	margin-right: 17%;
@@ -50,9 +52,10 @@ h2{
 }
 
 .topbar{
+	overflow: hidden;
 	margin-top: -5px;
 	width: 100%;
-	height: 50px;
+	height: auto;
 	background-color: #393939;
 }
 
@@ -110,13 +113,13 @@ div#clearfix {
 
 .about-title{
 	padding-top: 10px;
-	font-family: 微软雅黑;
+	font-family: "微软雅黑" "华文黑体";
 	font-size: 16px;
 	color: #ffffff;
 }
 
 .about-text{
-	font-family: 微软雅黑;
+	font-family: "华文细黑" "微软雅黑";
 	font-size: 14px;
 	color: #ffffff;
 	padding-left: 25px;
@@ -146,13 +149,14 @@ div#clearfix {
 .journal-list-item{
 	position: relative;
 	display: block;
-	padding: 10px 15px;
+	padding: 12px 15px;
 	margin-bottom: -1px;
 	border: 1px solid #dddddd;
 	background-color: #393939;
 	color: #e6e6e6;
 	text-decoration: none;
-	font-family: 微软雅黑;
+	font-family: "微软雅黑" "华文黑体";
+	-webkit-font-smoothing: antialiased;
 	font-size: 25px;
 }
 
@@ -199,7 +203,7 @@ a.journal-list-item:hover{
 	background-color: #393939;
 	color: #e6e6e6;
 	text-decoration: none;
-	font-family: 微软雅黑;
+	font-family: "微软雅黑" "华文黑体";
 	font-size: 25px;
 	border-top-right-radius: 8px;
   	border-top-left-radius: 8px;
@@ -242,7 +246,7 @@ a.journal-list-item:hover{
 	font-size: 25px;
 	color: #393939;
 	font-family: FontAwesome;
-	
+	-webkit-font-smoothing: antialiased;
 }
 
 .about-conneticon a:hover {
