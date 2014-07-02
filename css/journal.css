@@ -37,8 +37,9 @@
 
 .aside{
 	overflow: hidden;
+	width: 23%;
+	float: right;
 	position: relative;
-	margin-left: 78%;
 }
 
 .aside-title{
