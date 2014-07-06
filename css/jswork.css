@@ -1,0 +1,13 @@
+#wroldcup-container{
+	overflow: hidden;
+	padding: 20px 20px;
+	height: 300px;
+}
+
+.worldcup-ele{
+	overflow: hidden;
+	height: 50px;
+	background-color: #fff;
+}
+
+.
