@@ -116,7 +116,7 @@
 					showPicture(nextIndex);
 				else
 					showPicture(0);
-			}, 4000);
+			}, 5000);
 		}
 	}
 }();
