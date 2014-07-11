@@ -4,8 +4,11 @@
 	var currentPage = 1;
 
 	initComment();
-	sendMessage(1);
-
+	if(localStorage['commentPage']){
+		sendMessage(localStorage['commentPage']);
+	}else{
+		sendMessage(1);	
+	}
 	function sendMessage(page){
 		var pageNumber = parseInt(page);
 		if(pageNumber == 1){
@@ -21,6 +24,7 @@
 		$('#pageCount').text(pageNumber+' / 20 页')
 		url = '../data/comment/'+ pageNumber;
 		$('.form-control').val(pageNumber);
+		localStorage['commentPage'] = page;
 		commentRequest.onreadystatechange = handler;
 		commentRequest.open('GET', url);
 		commentRequest.send();
@@ -49,7 +53,7 @@
 
 	function setTitle(){
 		var titleBar = $('#commentTitle');
-		titleBar.append('<p style="font-size:25px; color:#393939; font-family:Microsoft YaHei; margin-bottom:0px;">评论（伪）</p>')
+		titleBar.append('<p style="font-size:25px; color:#393939; font-family:Microsoft YaHei; margin-bottom:0px;">评论<span style="font-size:15px">（伪）</span></p>')
 		titleBar.append('<p id="pageCount"></p>')
 	}
 

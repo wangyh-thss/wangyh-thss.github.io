@@ -147,11 +147,11 @@ div#clearfix {
 	overflow: hidden;
 	top: 0;
 	left: 0;
-	-webkit-transition: all 0.3s linear 0.4s;
-	-moz-transition: all 0.3s linear 0.4s;
-	-o-transition: all 0.3s linear 0.4s;
-	-ms-transition: all 0.3s linear 0.4s;
-	transition: all 0.3s linear 0.4s;
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	-ms-transition: all 0.3s linear;
+	transition: all 0.3s linear;
 }
 
 .picView h2{
@@ -165,11 +165,11 @@ div#clearfix {
 	-o-transform: translateY(-150px);
 	-ms-transform: translateY(-150px);
 	transform: translateY(-150px);
-	-webkit-transition: all 0.3s ease-in-out 0.4s;
-	-moz-transition: all 0.3s ease-in-out 0.4s;
-	-o-transition: all 0.3s ease-in-out 0.4s;
-	-ms-transition: all 0.3s ease-in-out 0.4s;
-	transition: all 0.3s ease-in-out 0.4s;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 .picView p{
@@ -183,11 +183,11 @@ div#clearfix {
 	-o-transform: scale(5);
 	-ms-transform: scale(5);
 	transform: scale(5);
-	-webkit-transition: all 0.3s ease-in-out 0.4s;
-	-moz-transition: all 0.3s ease-in-out 0.4s;
-	-o-transition: all 0.3s ease-in-out 0.4s;
-	-ms-transition: all 0.3s ease-in-out 0.4s;
-	transition: all 0.3s ease-in-out 0.4s;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 .picView a{
@@ -202,11 +202,11 @@ div#clearfix {
 	-o-transform: rotate(-359deg);
 	-ms-transform: rotate(-359deg);
 	transform: rotate(-359deg);
-	-webkit-transition: all 0.3s ease-in-out 0.4s;
-	-moz-transition: all 0.3s ease-in-out 0.4s;
-	-o-transition: all 0.3s ease-in-out 0.4s;
-	-ms-transition: all 0.3s ease-in-out 0.4s;
-	transition: all 0.3s ease-in-out 0.4s;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 .picView a:hover{

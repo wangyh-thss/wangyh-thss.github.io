@@ -61,8 +61,12 @@
 			//$('#num'+i)[0].onmouseout = mouseoutEvent(i);
 		}
 
-		showPicture(0);
-
+		if(localStorage['pictureNum']){
+			showPicture(localStorage['pictureNum']);
+		}else{
+			showPicture(0);	
+		}
+		
 		var timer;
 		var selectedIndex;
 		var currentNum;
@@ -82,6 +86,7 @@
 				currentNum.css('color', '#393939');
 				currentPicture = $('#pic'+index);
 				currentPicture.fadeIn('slow');
+				localStorage['pictureNum']  = selectedIndex;
 				$('#newsTitle').text(newsTitleArray[index]);
 				$('#newsTitle').attr('href', currentPicture.parent().attr('href'));
 			}
@@ -91,7 +96,7 @@
 					showPicture(nextIndex);
 				else
 					showPicture(0);
-			}, 10000000);
+			}, 5000);
 		}
 	}
 }();
