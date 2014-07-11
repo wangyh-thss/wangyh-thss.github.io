@@ -1,4 +1,4 @@
-void function comment(){
+﻿void function comment(){
 	var commentRequest = new XMLHttpRequest();
 	var url;
 	var currentPage = 1;
@@ -18,7 +18,7 @@ void function comment(){
 		}else{
 			$('.next').removeClass('disabled');
 		}
-		$('#pageCount').text(pageNumber+' / 20 ҳ')
+		$('#pageCount').text(pageNumber+' / 20 页')
 		url = '../data/comment/'+ pageNumber;
 		$('.form-control').val(pageNumber);
 		commentRequest.onreadystatechange = handler;
@@ -49,13 +49,13 @@ void function comment(){
 
 	function setTitle(){
 		var titleBar = $('#commentTitle');
-		titleBar.append('<p style="font-size:25px; color:#393939; font-family:Microsoft YaHei; margin-bottom:0px;">���ۣ�α��</p>')
+		titleBar.append('<p style="font-size:25px; color:#393939; font-family:Microsoft YaHei; margin-bottom:0px;">评论（伪）</p>')
 		titleBar.append('<p id="pageCount"></p>')
 	}
 
 	function setControl(){
 		var controlBar = $('#commentControl');
-		controlBar.append('<a class="btn btn-default next" href="#commentTitle" role="button">��һҳ</a>');
+		controlBar.append('<a class="btn btn-default next" href="#commentTitle" role="button">下一页</a>');
 		
 		var select = $('<select class="short form-control" style="float:right"></select>');
 		for(var i = 1; i <= 20; i++){
@@ -64,7 +64,7 @@ void function comment(){
 		select.wrap('<span></span>')
 		controlBar.append(select);
 		
-		controlBar.append('<a class="btn btn-default previous" href="#commentTitle" role="button">��һҳ</a>');
+		controlBar.append('<a class="btn btn-default previous" href="#commentTitle" role="button">上一页</a>');
 		$('.previous').click(function(){
 			if(currentPage > 1){
 				currentPage = currentPage - 1;

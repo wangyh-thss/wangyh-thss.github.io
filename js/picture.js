@@ -1,4 +1,4 @@
-void function picture(){
+ï»¿void function picture(){
 	var url = '../data/picture.json';
 
 	var pictureSlide = new XMLHttpRequest();
@@ -42,7 +42,7 @@ void function picture(){
 					<div class="mask">\
 						<h2>'+ data.picture[i].title +'</h2>\
 						<p>'+data.picture[i].info+'</p>\
-						<a href="'+data.picture[i].link+'" target="_blank">²é¿´ÏêÇé</a>\
+						<a href="'+data.picture[i].link+'" target="_blank">æŸ¥çœ‹è¯¦æƒ…</a>\
 					</div>\
 				</div>\
 				');
