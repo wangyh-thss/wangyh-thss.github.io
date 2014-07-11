@@ -36,7 +36,8 @@
 			//将图片依次插入，置于不同层，且每张图添加相应的新闻信息
 			pic.append('\
 				<div id= "pic'+i+'" class="picView" style="width:70%; display: none; z-index:'+i+'; position:absolute; overflow:hidden;">\
-					<img src="'+data.picture[i].url+'" style="width:100%;">\
+					<div class="left" style="position:relative;right:0px;width:50%;overflow:hidden;float:left"><img src="'+data.picture[i].url+'" style="width:200%;"></div>\
+					<div class="right" style="position:relative;left:0px;width:50%;overflow:hidden;"><img src="'+data.picture[i].url+'" style="margin-left:-100%;width:200%;"></div>\
 					<div class="mask">\
 						<h2>'+ data.picture[i].title +'</h2>\
 						<p>'+data.picture[i].info+'</p>\
@@ -48,21 +49,38 @@
 			num.append('<span id="num'+i+'" class="translucent" style="margin:0px 6px; background-color:#393939; color:#e6e6e6; padding: 2px 4px; border:1px solid #e6e6e6;font-size:10px; cursor:pointer;">'+(i+1)+'</span>');
 		}
 		//绑定鼠标指向序号控件事件（闭包）
+		var slide = [];
 		function mouseoverEvent(number){
 			return function(){
 				showPicture(number);
 			}
 		}
+		//图片切换效果
+		function splitSlide(number){
+			return function(){
+				var splitDIV = $('#pic'+ number);
+				var width = splitDIV.outerWidth() / 2;
+				splitDIV.children('.left').animate({right: width+'px'}, {queue:false, duration:300});
+				splitDIV.children('.right').animate({left: width+'px'}, {queue:false, duration:300, callback: initLR()});
+				splitDIV.fadeOut('slow');
+				function initLR(){
+					splitDIV.children('.left').css('right', '0px');
+					splitDIV.children('.right').css('left', '0px');
+				}
+			}
+		}
 		for(var i = 0; data.picture[i]; i++){
 			$('#num'+i)[0].onmousemove = mouseoverEvent(i);
+			//$('#pic'+i)[0].split = splitSlide(i);
+			slide[i] = splitSlide(i);
 		}
-		//HTML5本地存储，若有数据则从上一次查看的图片开始播放
 		
 		//图片轮播的实现
 		var timer;
 		var selectedIndex;
 		var currentNum;
 		var currentPicture;
+		//HTML5本地存储，若有数据则从上一次查看的图片开始播放
 		if(localStorage['pictureNum']){
 			showPicture(localStorage['pictureNum']);
 		}else{
@@ -70,10 +88,13 @@
 		}
 		function showPicture(index){
 			clearInterval(timer);
-			if(selectedIndex != index){
-				selectedIndex = index;
-				if(currentPicture)
-					currentPicture.fadeOut('slow');
+			if(eval(selectedIndex) != index){
+				if(currentPicture){
+					//currentPicture.split();
+					slide[eval(selectedIndex)]();
+					//currentPicture.hide();
+				}
+					//currentPicture.fadeOut('slow');
 				if(currentNum){
 					currentNum.css('background-color', '#393939');
 					currentNum.css('color', '#e6e6e6');
@@ -82,7 +103,10 @@
 				currentNum.css('background-color', '#e2bc33');
 				currentNum.css('color', '#393939');
 				currentPicture = $('#pic'+index);
+				currentPicture.children('.left').css('right', '0px');
+				currentPicture.children('.right').css('left', '0px');
 				currentPicture.fadeIn('slow');
+				selectedIndex = index;
 				localStorage['pictureNum']  = selectedIndex;
 			}
 			//循环播放
