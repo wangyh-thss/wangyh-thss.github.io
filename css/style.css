@@ -72,11 +72,11 @@ h5 > a:visited{
 	padding-right: 30px;
 }
 
-.navbar{
+.mynavbar{
 	
 }
 
-.navbar > a{
+.mynavbar > a{
 	color: #fff;
 	text-decoration: none;
 	font-family: Arial;
@@ -84,7 +84,7 @@ h5 > a:visited{
 	padding-left: 20px;
 }
 
-.navbar > a:hover{
+.mynavbar > a:hover{
 	color:#e2bc33;
 }
 

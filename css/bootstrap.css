@@ -43,22 +43,6 @@ html {
       -ms-text-size-adjust: 100%;
 }
 
-body {
-  margin: 0;
-}
-
-a {
-  background: transparent;
-}
-
-a:focus {
-  outline: thin dotted;
-}
-
-a:active,
-a:hover {
-  outline: 0;
-}
 
 h1 {
   margin: 0.67em 0;
@@ -221,20 +205,11 @@ table {
     background: transparent !important;
     box-shadow: none !important;
   }
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
+  
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
-    content: "";
-  }
+  
   pre,
   blockquote {
     border: 1px solid #999;
@@ -302,13 +277,6 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.428571429;
-  color: #333333;
-}
-
 input,
 button,
 select,
@@ -316,23 +284,6 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-}
-
-a {
-  color: #428bca;
-  text-decoration: none;
-}
-
-a:hover,
-a:focus {
-  color: #2a6496;
-  text-decoration: underline;
-}
-
-a:focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
 }
 
 img {
@@ -388,14 +339,10 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6,
 .h1,
 .h2,
 .h3,
-.h4,
-.h5,
-.h6 {
+.h4{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
   line-height: 1.1;
@@ -447,9 +394,7 @@ h3 .small {
   font-size: 65%;
 }
 
-h4,
-h5,
-h6 {
+h4 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -481,16 +426,6 @@ h3,
 h4,
 .h4 {
   font-size: 18px;
-}
-
-h5,
-.h5 {
-  font-size: 14px;
-}
-
-h6,
-.h6 {
-  font-size: 12px;
 }
 
 p {
