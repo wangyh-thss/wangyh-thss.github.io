@@ -19,7 +19,7 @@ void function comment(){
 			$('.next').removeClass('disabled');
 		}
 		$('#pageCount').text(pageNumber+' / 20 ҳ')
-		url = 'comment/'+ pageNumber;
+		url = '../data/comment/'+ pageNumber;
 		$('.form-control').val(pageNumber);
 		commentRequest.onreadystatechange = handler;
 		commentRequest.open('GET', url);

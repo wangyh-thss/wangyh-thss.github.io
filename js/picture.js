@@ -1,5 +1,5 @@
 void function picture(){
-	var url = 'picture.json';
+	var url = '../data/picture.json';
 
 	var pictureSlide = new XMLHttpRequest();
 	pictureSlide.onreadystatechange = handler;
