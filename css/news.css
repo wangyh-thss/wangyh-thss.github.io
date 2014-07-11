@@ -1,4 +1,4 @@
-body{
+ï»¿body{
 	margin:0px 0px;
 	background-color: #e6e6e6;
 }
@@ -43,7 +43,7 @@ div#clearfix {
 	background-color: #393939;
 	color: #e6e6e6;
 	text-decoration: none;
-	font-family: "Î¢ÈíÑÅºÚ" "»ªÎÄºÚÌå";
+	font-family: "å¾®è½¯é›…é»‘" "åæ–‡é»‘ä½“";
 	font-size: 18px;
 	border-top-right-radius: 8px;
   	border-top-left-radius: 8px;
@@ -79,7 +79,7 @@ div#clearfix {
 	font-size: 14px;
 	margin-top: 6px;
 	margin-bottom: 0px;
-	font-family: "Î¢ÈíÑÅºÚ";
+	font-family: "å¾®è½¯é›…é»‘";
 }
 
 .userHead{
@@ -155,7 +155,7 @@ div#clearfix {
 }
 
 .picView h2{
-	font-family: Î¢ÈíÑÅºÚ;
+	font-family: å¾®è½¯é›…é»‘;
 	color: #fff;
 	margin: 0px 0px;
 	padding: 14px 0px;
@@ -177,7 +177,7 @@ div#clearfix {
 	color: #fff;
 	line-height: 26px;
 	font-size: 18px;
-	font-family: "»ªÎÄÏ¸ºÚ" "Î¢ÈíÑÅºÚ";
+	font-family: "åæ–‡ç»†é»‘" "å¾®è½¯é›…é»‘";
 	-webkit-transform: scale(5);
 	-moz-transform: scale(5);
 	-o-transform: scale(5);
@@ -193,7 +193,7 @@ div#clearfix {
 .picView a{
 	display: inline-block;
 	text-decoration: none;
-	font-family: Î¢ÈíÑÅºÚ;
+	font-family: å¾®è½¯é›…é»‘;
 	background: #393939;
 	color: #fff;
 	padding: 6px 8px;
