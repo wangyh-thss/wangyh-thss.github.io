@@ -300,6 +300,7 @@ var gameLayer = cc.LayerColor.extend({
                         if(this.player.falling){
                             this.player.on_ground = true;
                             this.player.alterPosition(this.groundArray[i].posY);
+                            console.log('play');
                             cc.AudioEngine.getInstance().playEffect(m_fallDown);
                             return;
                         }
@@ -430,6 +431,7 @@ var gameLayer = cc.LayerColor.extend({
         cc.AudioEngine.getInstance().playEffect(m_speedup);
     },
     stopWudi : function(){
+        console.log('stop');
         this.wudiLabel = false;
         this.slowDown(3);
     }
