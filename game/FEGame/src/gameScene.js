@@ -10,15 +10,20 @@ var gameLayer = cc.LayerColor.extend({
     runningAction:null,
     jumpUpAction:null,
     jumpDownAction:null,
+    flyAction:null,
+    rollAction:null,
+    wudiAction:null,
     animFramesCoin:null,
     groundArray : null,
     rockArray : null,
     coinArray : null,
+    numLabelArray : null,
     propertyArray : null,
     speed : null,
     player : null,
     score : null,
     scoreLabel : null,
+    highScoreLabel : null,
     wudiLabel : null,
 
     ctor : function(){
@@ -37,6 +42,7 @@ var gameLayer = cc.LayerColor.extend({
         this.rockArray = [];
         this.coinArray = [];
         this.propertyArray = [];
+        this.numLabelArray = [];
         this.speed = 8;
         this.groundArray[0] = new ground(1800, 50, this.speed);
         this.groundArray[0].setFirstGround();
@@ -69,37 +75,87 @@ var gameLayer = cc.LayerColor.extend({
         this.runningAction.release();
         this.jumpUpAction.release();
         this.jumpDownAction.release();
+        this.rollAction.release();
+        this.flyAction.release();
+        this.wudiAction.release();
 
         this._super();
     },
 
     update : function(){
-        if(this.player.playerState == 0)
+        if(this.player.playerState == 'run'||this.player.playerState == 'wudi')
         {
             if(this.player.velocity > 0)
             {
                 this.player.stopAllActions();
                 this.player.runAction(this.jumpUpAction);
-                cc.log('xx');
-                this.player.playerState = 1;
+                this.player.playerState = 'jumpUp1';
             }
         }
-        if(this.player.playerState == 1)
+        else if(this.player.playerState == 'jumpUp1')
         {
             if(this.player.falling == true) {
                 this.player.stopAllActions();
                 this.player.runAction(this.jumpDownAction);
-                this.player.playerState = 2;
+                this.player.playerState = 'jumpDown';
+            }
+            else if(this.player.two_jump == true)
+            {
+                this.player.stopAllActions();
+                this.player.runAction(this.rollAction);
+                this.player.playerState = 'jumpUp2';
             }
         }
-        if(this.player.playerState == 2)
+        else if(this.player.playerState == 'jumpDown')
         {
             if(this.player.on_ground == true)
             {
                 this.player.stopAllActions();
                 this.player.runAction(this.runningAction);
-                this.player.playerState = 0;
+                this.player.playerState = 'run';
             }
+            else if(this.player.two_jump == true)
+            {
+                this.player.stopAllActions();
+                this.player.runAction(this.rollAction);
+                this.player.playerState = 'jumpUp2';
+            }
+        }
+        else if(this.player.playerState == 'jumpUp2')
+        {
+            if(this.player.falling == true)
+            {
+                this.player.stopAllActions();
+                this.player.runAction(this.runningAction);
+                this.player.playerState = 'jumpDown';
+            }
+        }
+        //flyAction
+        if(this.player.flyLable == true && this.player.playerState != 'fly')
+        {
+            this.player.stopAllActions();
+            this.player.runAction(this.flyAction);
+            this.player.playerState = 'fly';
+        }
+        if(this.player.flyLable == false && this.player.playerState == 'fly')
+        {
+            this.player.stopAllActions();
+            this.player.runAction(this.jumpDownAction);
+            this.player.playerState = 'jumpDown';
+        }
+        //wudiAction
+        if(this.wudiLabel == true && this.player.playerState != 'wudi')
+        {
+            this.player.stopAllActions();
+            this.player.runAction(this.wudiAction);
+            this.player.playerState = 'wudi';
+            cc.log('xx');
+        }
+        if(this.wudiLabel == false && this.player.playerState == 'wudi')
+        {
+            this.player.stopAllActions();
+            this.player.runAction(this.runningAction);
+            this.player.playerState = 'run';
         }
     },
 
@@ -137,6 +193,37 @@ var gameLayer = cc.LayerColor.extend({
         this.jumpDownAction = cc.RepeatForever.create(cc.Animate.create(animation));
         this.jumpDownAction.retain();
 
+        animFrames = [];
+        for (var i = 1; i < 16; i++) {
+            var str = "roll" + i + ".png";
+            var frame = cc.SpriteFrameCache.getInstance().getSpriteFrame(str);
+            animFrames.push(frame);
+        }
+        animation = cc.Animation.create(animFrames, 0.01);
+        this.rollAction = cc.RepeatForever.create(cc.Animate.create(animation));
+        this.rollAction.retain();
+
+        animFrames = [];
+        for (var i = 1; i < 5; i++) {
+            var str = "playerFly" + i + ".png";
+            var frame = cc.SpriteFrameCache.getInstance().getSpriteFrame(str);
+            animFrames.push(frame);
+        }
+        animation = cc.Animation.create(animFrames, 0.2);
+        this.flyAction = cc.RepeatForever.create(cc.Animate.create(animation));
+        this.flyAction.retain();
+
+        animFrames = [];
+        for (var i = 1; i < 9; i++) {
+            var str = "wudi" + i + ".png";
+            var frame = cc.SpriteFrameCache.getInstance().getSpriteFrame(str);
+            animFrames.push(frame);
+        }
+        animation = cc.Animation.create(animFrames, 0.05);
+        this.wudiAction = cc.RepeatForever.create(cc.Animate.create(animation));
+        this.wudiAction.retain();
+
+
         this.player = new player(300, 300, 'p1.png');
         this.player.runAction(this.runningAction);
         this.spriteSheetPlayer.addChild(this.player);
@@ -152,13 +239,16 @@ var gameLayer = cc.LayerColor.extend({
             this.delGround();
         }
         if(this.rockArray[0] && this.rockArray[0].posX + 20 <= 0){
-            this.delRock();
+            this.delRock(0);
         }
         if(this.coinArray[0] && this.coinArray[0].posX + 20 <= 0){
             this.delCoin(0);
         }
         if(this.propertyArray[0] && this.propertyArray[0].posX + 20 <= 0){
             this.delProperty(0);
+        }
+        if(this.numLabelArray[0] && this.numLabelArray[0].posY > 1400){
+            this.delNumLabel();
         }
         var num = this.groundArray.length;
         var gap = GetRandomNum(60, 100);
@@ -214,11 +304,14 @@ var gameLayer = cc.LayerColor.extend({
         }
         //加入物品
         if(GetRandomNum(1, 100) <= 20){
-            var pos = GetRandomNum(200, len)
-            if(GetRandomNum(-10, 10) > 0)
+            var pos = GetRandomNum(200, len);
+            var typeChoice = GetRandomNum(0, 13)
+            if(typeChoice < 5)
                 this.addProperty(pos, high+30, 'p_fly');
-            else
+            else if(typeChoice > 8)
                 this.addProperty(pos, high+30, 'p_wudi');
+            else
+                this.addProperty(pos, high+30, 'p_book');
         }
         //添加到层
         this.groundArray[num] = new ground(len, high, this.speed);
@@ -271,9 +364,9 @@ var gameLayer = cc.LayerColor.extend({
         var toDelete = this.groundArray.shift();
         this.removeChild(toDelete, true);
     },
-    delRock : function(){
-        var toDelete = this.rockArray.shift();
-        this.removeChild(toDelete, true);
+    delRock : function(index){
+        this.removeChild(this.rockArray[eval(index)], true);
+        this.rockArray.splice(eval(index), 1);
     },
     delCoin : function(index){
         this.spriteSheetCoin.removeChild(this.coinArray[eval(index)], true);
@@ -282,6 +375,10 @@ var gameLayer = cc.LayerColor.extend({
     delProperty : function(index){
         this.removeChild(this.propertyArray[eval(index)], true);
         this.propertyArray.splice(eval(index), 1);
+    },
+    delNumLabel : function(){
+        var toDelete = this.numLabelArray.shift();
+        this.removeChild(toDelete, true);
     },
     //鼠标点击事件
     onMouseDown:function(event) {
@@ -321,8 +418,7 @@ var gameLayer = cc.LayerColor.extend({
         if(this.collideRock() || this.fallDown()){
             //dead
             cc.Director.getInstance().pause();
-            cc.AudioEngine.getInstance().playEffect(m_gameoverFail);
-            this.getParent().addChild(new GameOverLayer());
+            this.getParent().addChild(new GameOverLayer(this.score));
         }
     },
     //判断是否与障碍物碰撞
@@ -333,6 +429,9 @@ var gameLayer = cc.LayerColor.extend({
                     if(this.wudiLabel == false){
                         cc.AudioEngine.getInstance().playEffect(m_gameoverCatch);
                         return true;
+                    }else{
+                        this.delRock(i);
+                        cc.AudioEngine.getInstance().playEffect(m_rock);
                     }
 
         }
@@ -344,6 +443,8 @@ var gameLayer = cc.LayerColor.extend({
             if(this.player.posX-50 < this.coinArray[i].posX+this.coinArray[i].width && this.player.posX+50 > this.coinArray[i].posX-this.coinArray[i].width)
                 if(this.player.posY-80 < this.coinArray[i].posY+this.coinArray[i].height && this.player.posY+80 > this.coinArray[i].posY-this.coinArray[i].height){
                     this.addScore(200);
+                    this.numLabelArray[this.numLabelArray.length] = new getScoreLabel(this.player.posX, this.player.posY);
+                    this.addChild(this.numLabelArray[this.numLabelArray.length-1], gameZIndex.ui);
                     cc.AudioEngine.getInstance().playEffect(m_coin);
                     this.delCoin(i);
                 }
@@ -359,9 +460,27 @@ var gameLayer = cc.LayerColor.extend({
                     if(this.propertyArray[i].type == 'p_wudi')
                         if(this.wudiLabel == false)
                             this.wudi();
+                    if(this.propertyArray[i].type == 'p_book'){
+                        this.eatBook();
+                    }
                     this.delProperty(i);
                 }
         }
+    },
+    //吃到升级书，如果没有三段跳技能，则获得该技能，否则加1000分
+    eatBook : function(){
+        if(this.player.three_ability == false){
+            this.numLabelArray[this.numLabelArray.length] = new getScoreLabel(this.player.posX, this.player.posY);
+            this.numLabelArray[this.numLabelArray.length-1].setString('获得技能：三段跳！！');
+            this.addChild(this.numLabelArray[this.numLabelArray.length-1], gameZIndex.ui);
+            this.player.three_ability = true;
+        }else{
+            this.numLabelArray[this.numLabelArray.length] = new getScoreLabel(this.player.posX, this.player.posY);
+            this.numLabelArray[this.numLabelArray.length-1].setString('+1000');
+            this.addChild(this.numLabelArray[this.numLabelArray.length-1], gameZIndex.ui);
+            this.addScore(1000);
+        }
+        cc.AudioEngine.getInstance().playEffect(m_book);
     },
     //整体提速
     speedUp : function(times){
@@ -406,9 +525,15 @@ var gameLayer = cc.LayerColor.extend({
     initScoreLable : function(){
         var size = cc.director.getWinSize();
         this.scoreLabel = cc.LabelTTF.create('Score: 0', 'Consolas', 40);
-        this.scoreLabel.setColor(0,0,0);
-        this.scoreLabel.setPosition(130, size.height - 100);
+        this.scoreLabel.setColor(new cc.Color3B(255,255,255));
+        this.scoreLabel.setPosition(size.width-200, size.height - 100);
         this.addChild(this.scoreLabel, gameZIndex.score);
+        if(localStorage['highScore']){
+            this.highScoreLabel = cc.LabelTTF.create('High Score:'+localStorage['highScore'], 'Consolas', 40);
+            this.highScoreLabel.setColor(new cc.Color3B(255,255,255));
+            this.highScoreLabel.setPosition(size.width-200, size.height - 160);
+            this.addChild(this.highScoreLabel, gameZIndex.score);
+        }
     },
     //更新分数，与当前速度以及金币数挂钩
     updateScore : function(){
