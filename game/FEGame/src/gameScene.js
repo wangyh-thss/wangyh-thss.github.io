@@ -231,13 +231,16 @@ var gameLayer = cc.LayerColor.extend({
         var x = this.player.posX;
         var y = this.player.posY;
         for(var i = 0; i < this.groundArray.length; i++){
-            if(y <= this.groundArray[i].posY + 140 && y >= this.groundArray[i].posY + 100){
+            if(y <= this.groundArray[i].posY + 160 && y >= this.groundArray[i].posY + 90){
                 if(x + 30 > this.groundArray[i].posX - this.groundArray[i].len/2 && x - 10 < this.groundArray[i].posX + this.groundArray[i].len/2)
                     if(this.player.on_ground == true)
                         return;
                     else{
                         if(this.player.falling){
                             this.player.on_ground = true;
+                            this.player.alterPosition(this.groundArray[i].posY);
+                            console.log('play');
+                            cc.AudioEngine.getInstance().playEffect(m_fallDown);
                             return;
                         }
                     }
@@ -247,24 +250,31 @@ var gameLayer = cc.LayerColor.extend({
     },
     //掉下gameover
     fallDown : function(){
-        if(this.player.posY < 0){
+        if(this.player.posY < -100){
+            cc.AudioEngine.getInstance().playEffect(m_gameoverFall);
             return true;
         }
         return false;
     },
     //判断游戏结束条件
     gameOver : function(){
-        if((this.collideRock() && this.wudiLabel == false) || this.fallDown()){
+        if(this.collideRock() || this.fallDown()){
             //dead
-            console.log('dead!!');
+            cc.Director.getInstance().pause();
+            cc.AudioEngine.getInstance().playEffect(m_gameoverFail);
+            this.getParent().addChild(new GameOverLayer());
         }
     },
     //判断是否与障碍物碰撞
     collideRock : function(){
         for(var i = 0; i < this.rockArray.length; i++){
-            if(this.player.posX-50 < this.rockArray[i].posX+this.rockArray[i].width && this.player.posX+50 > this.rockArray[i].posX-this.rockArray[i].width)
-                if(this.player.posY-90 < this.rockArray[i].posY+this.rockArray[i].height && this.player.posY+90 > this.rockArray[i].posY-this.rockArray[i].height)
-                    return true;
+            if(this.player.posX-40 < this.rockArray[i].posX+this.rockArray[i].width && this.player.posX+40 > this.rockArray[i].posX-this.rockArray[i].width)
+                if(this.player.posY-50 < this.rockArray[i].posY+this.rockArray[i].height && this.player.posY+50 > this.rockArray[i].posY-this.rockArray[i].height)
+                    if(this.wudiLabel == false){
+                        cc.AudioEngine.getInstance().playEffect(m_gameoverCatch);
+                        return true;
+                    }
+
         }
         return false;
     },
@@ -274,6 +284,7 @@ var gameLayer = cc.LayerColor.extend({
             if(this.player.posX-50 < this.coinArray[i].posX+this.coinArray[i].width && this.player.posX+50 > this.coinArray[i].posX-this.coinArray[i].width)
                 if(this.player.posY-80 < this.coinArray[i].posY+this.coinArray[i].height && this.player.posY+80 > this.coinArray[i].posY-this.coinArray[i].height){
                     this.addScore(200);
+                    cc.AudioEngine.getInstance().playEffect(m_coin);
                     this.delCoin(i);
                 }
         }
@@ -356,6 +367,7 @@ var gameLayer = cc.LayerColor.extend({
         this.wudiLabel = true;
         this.speedUp(3);
         this.scheduleOnce(this.stopWudi, 3);
+        cc.AudioEngine.getInstance().playEffect(m_speedup);
     },
     stopWudi : function(){
         console.log('stop');
