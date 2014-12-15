@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Game of Life</title>
+		<link rel="stylesheet" type="text/css" href="index.css" />
+		<script type="text/javascript" src="./jquery-2.1.1.min.js"></script>
+		
+	</head>
+	<body>
+		<!-- 游戏画布部分 -->
+		<div id = "TopWindow">
+			<div id = "MainWindow">
+				<div id = "GameWindow"></div>
+			</div>
+			<!-- <button type="button">开始/暂停</button> -->
+			<div id = "ButtonWindow">
+				<div class='button'>
+				<a href="#" id="startOrStop" onclick="changeRunningState();">Start</a>
+				<a href="#" onclick="nextGeneration();">Step</a>
+				<a href="#" onclick="randomState();">Restart</a>
+				</div>
+				<div id="instruction">
+					<h1>豌豆黄和止泻药的LifeGame</h1>
+					<h2>操作说明</h2>
+					<p>【SPACE】开始/暂停自动模拟</p>
+					<p>【ENTER】手动逐代模拟</p>
+					<p>【R】随机设定细胞生死状态</p>
+					<p>【<】【>】减慢/加快自动模拟速度</p>
+					<p>【-】【+】增加/减少格子数量</p>					
+				</div>
+			</div>
+			<script type="text/javascript" src = "Game.js"></script>
+		</div>
+		
+		<!-- 版权声明 -->
+		<div id = "InfoWindow">
+			<p>
+				<i>Copyright © 2014 <a href="https://stefaniexin.github.io" target="_blank" title="Xinyi Zhao"><strong>Xinyi Zhao</strong></a> &amp; <a href="#" target="_blank" title="Yihan Wang"><strong>Yihan Wang</strong></a></i>
+			</p>
+		</div>
+	</body>
+</html>

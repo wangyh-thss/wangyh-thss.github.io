@@ -1,0 +1,128 @@
+body{
+	_background-color: rgba(117,105,94,1);
+	background-color: rgba(0,0,0,0.95);
+	color: black;
+	text-align: center;
+	overflow:hidden;
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	_font-family: "微软雅黑";
+	font-family: "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", tahoma, arial, simsun, "宋体",serif;
+    
+}
+
+a{
+	color: inherit;
+}
+
+#TopWindow{
+	position: absolute;
+	width: 100%;
+	height: 90%;
+	margin: auto;
+}
+
+#MainWindow{
+	position: absolute;
+	_background-color: rgba(0,0,0,0.6);
+	background-color: rgba(64,64,64,1);
+	box-shadow: 3px 3px 5px rgba(75,75,75,0.5);
+	top:15%;
+	left: 11%;
+	width: 41%;
+	height: 80%;
+}
+
+#title{
+	position: absolute;
+	height: 15%;
+	width: 100%;
+	padding-bottom: 0;
+}
+
+#title p{
+	font-size: 24px;
+	font-weight: bold;
+	text-align: left;
+	color: white;
+}
+
+#GameWindow{
+	position: absolute;
+}
+
+#ButtonWindow{
+	position: absolute;
+	top:10%;
+	left:53%;
+	width: 450px;
+	height: 90%;
+	color: white;
+}
+
+.button {
+	position: absolute;
+	top:15%;
+	float: left;
+	margin: auto 1em;
+	overflow: hidden;
+}
+
+.button a {
+	float: left;
+	border-radius: 6px;
+	width: 5em;
+	line-height: 200%;
+	text-align: center;
+	font-size: 150%;
+	margin: 0 0.2em;
+	text-decoration: none;
+}
+.button a:hover {
+	_background-color:rgba(219,188,141,0.5);
+	background-color:rgba(235,151,42,0.8);
+}
+
+#instruction{
+	position: absolute;
+	top:25%;
+	left: 16.5%;
+}
+
+#instruction h1{
+	font-size: 23px;
+	_font-style: normal;
+	text-align: center;
+	color:rgba(235,151,42,1);
+	_font-family: "微软雅黑";
+
+}
+
+
+#InfoWindow{
+	position: absolute;
+	top:90%;
+	width: 100%;
+}
+
+		
+.alive{
+	_background-color:rgba(219,188,141,0.9);
+	background-color:rgba(235,151,42,0.9);
+	position:absolute;
+	width:0.9em; height:0.9em;
+	border-radius: 0.3em;
+}
+.dead{
+	background-color:rgba(0,0,0,0);
+	position:absolute;
+	width:0.9em; height:0.9em;
+	border-radius: 0.3em;
+}
+
+#footer p {
+	font-family: 'American Typewriter' sans-serif "consolas";
+	text-align: center;
+}
+		
