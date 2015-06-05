@@ -1,0 +1,327 @@
+/* Reset CSS
+ * --------------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+    margin:0;
+    padding:0;
+    color:#444;
+}
+h1{
+    font-size: 4em;
+}
+body {
+    font-family: "STHeiti" "Microsoft YaHei";
+}
+/* Navigation */
+#fp-nav{
+    font-size: 12px;
+}
+#fp-nav li {
+    width: 90px;
+    height: 21px;
+    margin: 10px 0 0;
+    vertical-align: middle;
+}
+#fp-nav ul li .fp-tooltip.right {
+    float: left;
+    top: 0;
+    margin-right: 5px;
+    color: #009966;
+    line-height: 21px;
+}
+#fp-nav ul li a span{
+    background: #fff;
+}
+
+/* Menu */
+#menu li {
+    display:inline-block;
+    margin: 10px;
+    color: #000;
+    background:#fff;
+    background: rgba(255,255,255, 0.5);
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+}
+#menu li.active{
+    background:#666;
+    background: rgba(0,0,0, 0.5);
+    color: #fff;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+}
+#menu li a{
+    text-decoration:none;
+    color: #000;
+}
+#menu li.active a:hover{
+    color: #000;
+}
+#menu li:hover{
+    background: rgba(255,255,255, 0.8);
+}
+#menu li a,
+#menu li.active a{
+    padding: 9px 18px;
+    display:block;
+}
+#menu li.active a{
+    color: #fff;
+}
+#menu{
+    position:fixed;
+    top:0;
+    left:0;
+    height: 40px;
+    z-index: 70;
+    width: 100%;
+    padding: 0;
+    margin:0;
+}
+/* Section 1 */
+#index{
+    background-image: url(../img/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#index h1{
+    position: fixed;
+    z-index: 80;
+    top: 20%;
+    left: 60%;
+    color: #F2F9E7;
+    font-weight: bold;
+}
+#indexTextContainer{
+    position: fixed;
+    top: 33%;
+    right: 10%;
+    margin:20px auto;
+    width:42%;
+    overflow:hidden;
+    z-index: 31;
+    display: none;
+}
+#indexTextBackground{
+    position: absolute;
+    z-index: 32;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px 30px;
+    background-color: #999999;
+    filter:alpha(Opacity=40);
+    -moz-opacity:0.4;
+    opacity: 0.4;
+}
+#indexText{
+    font-size: 16px;
+    line-height: 30px;
+    color:#fff;
+    position:relative;
+    z-index:33;
+    padding:20px 20px;
+}
+/* Section 2 */
+#scenery{
+    background-image: url(../img/bg2.jpg);
+    background-size: cover;
+}
+#scenery .imgbox{
+    display: none;
+}
+#scenery img {
+    z-index: 80;
+    float: left;
+    border-radius: 50%;
+}
+.imgbox .hoversensor {
+    z-index: 90;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border-radius: 50%;
+}
+#imgbox1{
+    position: absolute;
+    left: 5%;
+    bottom: -40%;
+}
+#imgbox2{
+    position: absolute;
+    left: 40%;
+    bottom: -45%
+}
+#imgbox3{
+    position: absolute;
+    left: 20%;
+    bottom: -28%;
+}
+#imgbox4{
+    position: absolute;
+    left: 68%;
+    bottom: -40%;
+}
+#imgbox5{
+    position: absolute;
+    left: 70%;
+    bottom: -70%;
+}
+.tip{
+    display: none;
+    z-index: 90;
+    margin-top: 10%;
+    float: right;
+    position: relative;
+    padding: 50px 20px;
+    width: 20%;
+    text-align: center;
+    background-color: #393939;
+    color: #e6e6e6;
+    text-decoration: none;
+    font-size: 16px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.tip:before{
+    position: absolute;
+    border-top: 20px solid transparent;
+    border-right: 20px solid #eee;
+    border-bottom: 20px solid transparent;
+    border-right-color: #393939;
+    left: -18px;
+    top: 40px;
+    content: '';
+}
+#cover {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: #111111;
+}
+/* Section 3 */
+.fp-prev{
+    border-color: transparent #111111 transparent transparent;
+}
+#fishing {
+    position: absolute;
+    font-size: 80px;
+    bottom: 0px;
+    color: white;
+    padding: 25px 25px 50px 25px;
+    background-color: #111111;
+    filter:alpha(Opacity=40);
+    -moz-opacity:0.4;
+    opacity: 0.4;
+}
+#pingpang {
+    text-align: center;
+    font-size: 90px;
+    color: white;
+    padding: 20px;
+    background-color: #111111;
+    filter:alpha(Opacity=40);
+    -moz-opacity:0.4;
+    opacity: 0.4;
+}
+#billiard {
+    position: absolute;
+    font-size: 90px;
+    top: 130px;
+    color: white;
+    padding: 20px 130px 20px 20px;
+    background-color: #111111;
+    filter:alpha(Opacity=40);
+    -moz-opacity:0.4;
+    opacity: 0.4;
+}
+#audio {
+    position: absolute;
+    top: 70%;
+    font-size: 90px;
+    color: white;
+    padding: 20px 20px 20px 110px;
+    background-color: #111111;
+    filter:alpha(Opacity=40);
+    -moz-opacity:0.4;
+    opacity: 0.4;
+}
+
+/* Section 4 */
+#live{
+    background-image: url(../img/bg4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+.itemBox {
+    display: inline-block;
+    padding: 200px 40px 40px 40px;
+    vertical-align: top;
+}
+.itemBox p {
+    color: white;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: left;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.itemBox h1{
+    color: white;
+    font-size: 2em;
+    padding-top: 2em;
+    padding-bottom: 0.5em;
+}
+/* Section 5 */
+#contact{
+    background-image: url(../img/bg5.jpeg);
+    background-size: cover;
+}
+#contactBg {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    height: 240px;
+    background-color: #111111;
+    filter:alpha(Opacity=30);
+    -moz-opacity:0.3;
+    opacity: 0.3;
+}
+#contactContent {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    height: 240px;
+}
+#leftBox {
+    float: left;
+    padding: 16px 0px 16px 10%;
+    width: 38%;
+}
+#rightBox {
+    float: right;
+    padding: 16px 0px 16px 0px;
+    width: 44%;
+}
+.title {
+    color: #dddddd;
+    font-size: 20px;
+    line-height: 40px;
+}
+.textContent {
+    text-indent:2em;
+    color: #dddddd;
+    font-size: 14px;
+    line-height: 20px;
+}
