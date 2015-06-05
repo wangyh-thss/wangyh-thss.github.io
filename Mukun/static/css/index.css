@@ -2,15 +2,15 @@
  * --------------------------------------- */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
 form,fieldset,input,textarea,p,blockquote,th,td {
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 h1,h2,h3,h4,h5,h6 {
-    font-weight: normal;
+    color:#444;
     font-size: 100%;
+    font-weight: normal;
     margin:0;
     padding:0;
-    color:#444;
 }
 h1{
     font-size: 4em;
@@ -23,17 +23,17 @@ body {
     font-size: 12px;
 }
 #fp-nav li {
-    width: 90px;
     height: 21px;
     margin: 10px 0 0;
     vertical-align: middle;
+    width: 90px;
 }
 #fp-nav ul li .fp-tooltip.right {
-    float: left;
-    top: 0;
-    margin-right: 5px;
     color: #009966;
+    float: left;
     line-height: 21px;
+    margin-right: 5px;
+    top: 0;
 }
 #fp-nav ul li a span{
     background: #fff;
@@ -41,24 +41,24 @@ body {
 
 /* Menu */
 #menu li {
+    background: rgba(255,255,255, 0.5);
+    background:#fff;
+    color: #000;
     display:inline-block;
     margin: 10px;
-    color: #000;
-    background:#fff;
-    background: rgba(255,255,255, 0.5);
     -webkit-border-radius: 10px;
             border-radius: 10px;
 }
 #menu li.active{
-    background:#666;
     background: rgba(0,0,0, 0.5);
+    background:#666;
     color: #fff;
     -webkit-border-radius: 10px;
             border-radius: 10px;
 }
 #menu li a{
-    text-decoration:none;
     color: #000;
+    text-decoration:none;
 }
 #menu li.active a:hover{
     color: #000;
@@ -68,21 +68,21 @@ body {
 }
 #menu li a,
 #menu li.active a{
-    padding: 9px 18px;
     display:block;
+    padding: 9px 18px;
 }
 #menu li.active a{
     color: #fff;
 }
 #menu{
+    height: 40px;
+    left:0;
+    margin:0;
+    padding: 0;
     position:fixed;
     top:0;
-    left:0;
-    height: 40px;
-    z-index: 70;
     width: 100%;
-    padding: 0;
-    margin:0;
+    z-index: 70;
 }
 /* Section 1 */
 #index{
@@ -91,43 +91,43 @@ body {
     background-size: cover;
 }
 #index h1{
-    position: fixed;
-    z-index: 80;
-    top: 20%;
-    left: 60%;
     color: #F2F9E7;
     font-weight: bold;
+    left: 60%;
+    position: fixed;
+    top: 20%;
+    z-index: 80;
 }
 #indexTextContainer{
-    position: fixed;
-    top: 33%;
-    right: 10%;
-    margin:20px auto;
-    width:42%;
-    overflow:hidden;
-    z-index: 31;
     display: none;
+    margin:20px auto;
+    overflow:hidden;
+    position: fixed;
+    right: 10%;
+    top: 33%;
+    width:42%;
+    z-index: 31;
 }
 #indexTextBackground{
-    position: absolute;
-    z-index: 32;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 20px 30px;
     background-color: #999999;
+    height: 100%;
+    left: 0;
+    padding: 20px 30px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 32;
+    opacity: 0.4;
     filter:alpha(Opacity=40);
     -moz-opacity:0.4;
-    opacity: 0.4;
 }
 #indexText{
+    color:#fff;
     font-size: 16px;
     line-height: 30px;
-    color:#fff;
+    padding:20px 20px;
     position:relative;
     z-index:33;
-    padding:20px 20px;
 }
 /* Section 2 */
 #scenery{
@@ -138,119 +138,119 @@ body {
     display: none;
 }
 #scenery img {
-    z-index: 80;
-    float: left;
     border-radius: 50%;
+    float: left;
+    z-index: 80;
 }
 .imgbox .hoversensor {
-    z-index: 90;
-    position: absolute;
-    left: 0px;
-    top: 0px;
     border-radius: 50%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    z-index: 90;
 }
 #imgbox1{
-    position: absolute;
-    left: 5%;
     bottom: -40%;
+    left: 5%;
+    position: absolute;
 }
 #imgbox2{
-    position: absolute;
+    bottom: -45%;
     left: 40%;
-    bottom: -45%
+    position: absolute;
 }
 #imgbox3{
-    position: absolute;
-    left: 20%;
     bottom: -28%;
+    left: 20%;
+    position: absolute;
 }
 #imgbox4{
-    position: absolute;
-    left: 68%;
     bottom: -40%;
+    left: 68%;
+    position: absolute;
 }
 #imgbox5{
-    position: absolute;
-    left: 70%;
     bottom: -70%;
+    left: 70%;
+    position: absolute;
 }
 .tip{
-    display: none;
-    z-index: 90;
-    margin-top: 10%;
-    float: right;
-    position: relative;
-    padding: 50px 20px;
-    width: 20%;
-    text-align: center;
     background-color: #393939;
-    color: #e6e6e6;
-    text-decoration: none;
-    font-size: 16px;
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
-    border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    color: #e6e6e6;
+    display: none;
+    float: right;
+    font-size: 16px;
+    margin-top: 10%;
+    padding: 50px 20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    width: 20%;
+    z-index: 90;
 }
 .tip:before{
-    position: absolute;
-    border-top: 20px solid transparent;
-    border-right: 20px solid #eee;
     border-bottom: 20px solid transparent;
     border-right-color: #393939;
-    left: -18px;
-    top: 40px;
+    border-right: 20px solid #eee;
+    border-top: 20px solid transparent;
     content: '';
+    left: -18px;
+    position: absolute;
+    top: 40px;
 }
 #cover {
+    background-color: #111111;
+    left: 0px;
     position: fixed;
     top: 0px;
-    left: 0px;
-    background-color: #111111;
 }
 /* Section 3 */
 .fp-prev{
     border-color: transparent #111111 transparent transparent;
 }
 #fishing {
-    position: absolute;
-    font-size: 80px;
+    background-color: #111111;
     bottom: 0px;
     color: white;
+    font-size: 80px;
     padding: 25px 25px 50px 25px;
-    background-color: #111111;
+    position: absolute;
     filter:alpha(Opacity=40);
     -moz-opacity:0.4;
     opacity: 0.4;
 }
 #pingpang {
-    text-align: center;
-    font-size: 90px;
-    color: white;
-    padding: 20px;
     background-color: #111111;
+    color: white;
+    font-size: 90px;
+    padding: 20px;
+    text-align: center;
     filter:alpha(Opacity=40);
     -moz-opacity:0.4;
     opacity: 0.4;
 }
 #billiard {
-    position: absolute;
-    font-size: 90px;
-    top: 130px;
-    color: white;
-    padding: 20px 130px 20px 20px;
     background-color: #111111;
+    color: white;
+    font-size: 90px;
+    padding: 20px 130px 20px 20px;
+    position: absolute;
+    top: 130px;
     filter:alpha(Opacity=40);
     -moz-opacity:0.4;
     opacity: 0.4;
 }
 #audio {
+    background-color: #111111;
+    color: white;
+    font-size: 90px;
+    padding: 20px 20px 20px 110px;
     position: absolute;
     top: 70%;
-    font-size: 90px;
-    color: white;
-    padding: 20px 20px 20px 110px;
-    background-color: #111111;
     filter:alpha(Opacity=40);
     -moz-opacity:0.4;
     opacity: 0.4;
@@ -272,16 +272,16 @@ body {
     color: white;
     font-size: 16px;
     line-height: 22px;
-    text-align: left;
-    width: 200px;
     margin-left: auto;
     margin-right: auto;
+    text-align: left;
+    width: 200px;
 }
 .itemBox h1{
     color: white;
     font-size: 2em;
-    padding-top: 2em;
     padding-bottom: 0.5em;
+    padding-top: 2em;
 }
 /* Section 5 */
 #contact{
@@ -289,20 +289,20 @@ body {
     background-size: cover;
 }
 #contactBg {
+    -moz-opacity:0.3;
+    background-color: #111111;
+    bottom: 0px;
+    filter:alpha(Opacity=30);
+    height: 240px;
+    opacity: 0.3;
     position: absolute;
     width: 100%;
-    bottom: 0px;
-    height: 240px;
-    background-color: #111111;
-    filter:alpha(Opacity=30);
-    -moz-opacity:0.3;
-    opacity: 0.3;
 }
 #contactContent {
-    position: absolute;
-    width: 100%;
     bottom: 0px;
     height: 240px;
+    position: absolute;
+    width: 100%;
 }
 #leftBox {
     float: left;
@@ -320,8 +320,8 @@ body {
     line-height: 40px;
 }
 .textContent {
-    text-indent:2em;
     color: #dddddd;
     font-size: 14px;
     line-height: 20px;
+    text-indent:2em;
 }
