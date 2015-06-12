@@ -18,19 +18,35 @@ $(document).ready(function() {
                     opacity: 'show'
                 }, 1500, 'easeOutExpo');
                 $('#imgbox2').delay(300).animate({
-                    bottom: '40%',
+                    bottom: '48%',
                     opacity: 'show'
                 }, 1500, 'easeOutExpo');
                 $('#imgbox3').delay(300).animate({
-                    bottom: '55%',
+                    bottom: '46%',
                     opacity: 'show'
                 }, 1500, 'easeOutExpo');
                 $('#imgbox4').delay(400).animate({
-                    bottom: '30%',
+                    bottom: '32%',
                     opacity: 'show'
                 }, 1500, 'easeOutExpo');
                 $('#imgbox5').delay(250).animate({
                     bottom: '66%',
+                    opacity: 'show'
+                }, 1500, 'easeOutExpo');
+                $('#imgbox6').delay(250).animate({
+                    bottom: '10%',
+                    opacity: 'show'
+                }, 1500, 'easeOutExpo');
+                $('#imgbox7').delay(250).animate({
+                    bottom: '10%',
+                    opacity: 'show'
+                }, 1500, 'easeOutExpo');
+                $('#imgbox8').delay(250).animate({
+                    bottom: '60%',
+                    opacity: 'show'
+                }, 1500, 'easeOutExpo');
+                $('#imgbox9').delay(250).animate({
+                    bottom: '5%',
                     opacity: 'show'
                 }, 1500, 'easeOutExpo');
             }
@@ -52,7 +68,14 @@ $(document).ready(function() {
     });
     $('.fp-prev').css('border-color', 'transparent #cccccc transparent transparent');
     $('.fp-next').css('border-color', 'transparent transparent transparent #cccccc');
+    $('#index').css('height', windowH);
+    $('#index .fp-tableCell').css('height', windowH);
+    $('#scenery').css('height', windowH);
+    $('#scenery .fp-tableCell').css('height', windowH);
     $('#entertainment').css('height', windowH);
+    $('#live').css('height', windowH);
+    $('#contact').css('height', windowH);
+    $('#contact .fp-tableCell').css('height', windowH);
     $('.slide .fp-tableCell').css('height', $(window).height());
     $('#fishing').css('left', windowW - 370);
     $('#billiard').css('left', windowW * 3 - 330);
