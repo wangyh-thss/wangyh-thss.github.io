@@ -1,0 +1,351 @@
+/* Reset CSS
+ * --------------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h3,h4,h5,h6 {
+    color:#444;
+    font-size: 100%;
+    font-weight: normal;
+    margin:0;
+    padding:0;
+}
+h1{
+    font-size: 4em;
+}
+body {
+    font-family: "STHeiti" "Microsoft YaHei";
+}
+/* Navigation */
+#fp-nav{
+    font-size: 12px;
+}
+#fp-nav li {
+    height: 21px;
+    margin: 10px 0 0;
+    vertical-align: middle;
+    width: 90px;
+}
+#fp-nav ul li .fp-tooltip.right {
+    color: #009966;
+    float: left;
+    line-height: 21px;
+    margin-right: 5px;
+    top: 0;
+}
+#fp-nav ul li a span{
+    background: #fff;
+}
+
+/* Menu */
+#menu li {
+    background: rgba(255,255,255, 0.5);
+    background:#fff;
+    color: #000;
+    display:inline-block;
+    margin: 10px;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+}
+#menu li.active{
+    background: rgba(0,0,0, 0.5);
+    background:#666;
+    color: #fff;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+}
+#menu li a{
+    color: #000;
+    text-decoration:none;
+}
+#menu li.active a:hover{
+    color: #000;
+}
+#menu li:hover{
+    background: rgba(255,255,255, 0.8);
+}
+#menu li a,
+#menu li.active a{
+    display:block;
+    padding: 9px 18px;
+}
+#menu li.active a{
+    color: #fff;
+}
+#menu{
+    height: 40px;
+    left:0;
+    margin:0;
+    padding: 0;
+    position:fixed;
+    top:0;
+    width: 100%;
+    z-index: 70;
+}
+/* Section 1 */
+#index{
+    background-image: url(../img/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#index h1{
+    color: #CC4413;
+    font-weight: bold;
+    left: 60%;
+    position: fixed;
+    top: 20%;
+    z-index: 80;
+}
+#indexTextContainer{
+    margin:20px auto;
+    overflow:hidden;
+    position: fixed;
+    right: 10%;
+    top: 30%;
+    width:42%;
+    z-index: 31;
+}
+#indexTextBackground{
+    background-color: #999999;
+    height: 100%;
+    left: 0;
+    padding: 20px 30px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 32;
+    opacity: 0;
+    filter:alpha(Opacity=0);
+    -moz-opacity:0;
+}
+#indexText{
+    color: #8ACCC5;
+    font-size: 20px;
+    line-height: 30px;
+    padding:20px 20px;
+    position:relative;
+    z-index:33;
+}
+/* Section 2 */
+#scenery{
+    background-image: url(../img/bg2.jpg);
+    background-size: cover;
+}
+#scenery .imgbox{
+    display: none;
+}
+#scenery img {
+    border-radius: 50%;
+    float: left;
+    z-index: 80;
+}
+.imgbox .hoversensor {
+    border-radius: 50%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    z-index: 90;
+}
+#imgbox1{
+    bottom: -40%;
+    left: 5%;
+    position: absolute;
+    z-index: 81;
+}
+#imgbox2{
+    bottom: -45%;
+    left: 40%;
+    position: absolute;
+    z-index: 82;
+}
+#imgbox3{
+    bottom: -28%;
+    left: 21%;
+    position: absolute;
+}
+#imgbox4{
+    bottom: -40%;
+    left: 71%;
+    position: absolute;
+}
+#imgbox5{
+    bottom: -70%;
+    left: 70%;
+    position: absolute;
+}
+#imgbox6 {
+    bottom: -70%;
+    left: 30%;
+    position: absolute;
+}
+#imgbox7 {
+    bottom: -120%;
+    left: 51%;
+    position: absolute;
+}
+#imgbox8 {
+    bottom: -40%;
+    left: 1%;
+    position: absolute;
+}
+#imgbox9 {
+    bottom: -110%;
+    left: 80%;
+    position: absolute;
+}
+.tip{
+    background-color: #CCC4B3;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    color: #FF3300;
+    display: none;
+    float: right;
+    font-size: 20px;
+    margin-top: 10%;
+    margin-left: 20px;
+    padding: 20px 10px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    width: 120px;
+    z-index: 90;
+}
+.tip:before{
+    border-bottom: 20px solid transparent;
+    border-right-color: #CCC4B3;
+    border-right: 20px solid #CCC4B3;
+    border-top: 20px solid transparent;
+    content: '';
+    left: -12px;
+    position: absolute;
+    top: 10px;
+}
+#cover {
+    background-color: #111111;
+    left: 0px;
+    position: fixed;
+    top: 0px;
+}
+/* Section 3 */
+.fp-prev{
+    border-color: transparent #111111 transparent transparent;
+}
+#fishing {
+    background-color: #111111;
+    bottom: 0px;
+    color: white;
+    font-size: 80px;
+    padding: 25px 25px 50px 25px;
+    position: absolute;
+    filter:alpha(Opacity=40);
+    -moz-opacity:0.4;
+    opacity: 0.4;
+}
+#pingpang {
+    background-color: #111111;
+    color: white;
+    font-size: 90px;
+    padding: 20px;
+    text-align: center;
+    filter:alpha(Opacity=40);
+    -moz-opacity:0.4;
+    opacity: 0.4;
+}
+#billiard {
+    background-color: #111111;
+    color: white;
+    font-size: 90px;
+    padding: 20px 130px 20px 20px;
+    position: absolute;
+    top: 130px;
+    filter:alpha(Opacity=40);
+    -moz-opacity:0.4;
+    opacity: 0.4;
+}
+#audio {
+    background-color: #111111;
+    color: white;
+    font-size: 90px;
+    padding: 20px 20px 20px 110px;
+    position: absolute;
+    top: 70%;
+    filter:alpha(Opacity=40);
+    -moz-opacity:0.4;
+    opacity: 0.4;
+}
+
+/* Section 4 */
+#live{
+    background-image: url(../img/bg4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+.itemBox {
+    display: inline-block;
+    padding: 200px 40px 40px 40px;
+    vertical-align: top;
+}
+.itemBox p {
+    color: white;
+    font-size: 16px;
+    line-height: 22px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    width: 200px;
+}
+.itemBox h1{
+    color: white;
+    font-size: 2em;
+    padding-bottom: 0.5em;
+    padding-top: 2em;
+}
+/* Section 5 */
+#contact{
+    background-image: url(../img/bg5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#contactBg {
+    -moz-opacity:0.4;
+    background-color: #111111;
+    bottom: 0px;
+    filter:alpha(Opacity=40);
+    height: 300px;
+    opacity: 0.4;
+    position: absolute;
+    width: 100%;
+}
+#contactContent {
+    bottom: 0px;
+    height: 300px;
+    position: absolute;
+    width: 100%;
+}
+#leftBox {
+    float: left;
+    padding: 16px 0px 16px 10%;
+    width: 38%;
+}
+#rightBox {
+    float: right;
+    padding: 16px 0px 16px 0px;
+    width: 44%;
+}
+.title {
+    color: #dddddd;
+    font-size: 26px;
+    line-height: 40px;
+}
+.textContent {
+    color: #dddddd;
+    font-size: 18px;
+    line-height: 30px;
+    text-indent:2em;
+    padding-left: 30px;
+}
