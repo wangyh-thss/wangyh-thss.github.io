@@ -56,7 +56,7 @@ $(document).ready(function() {
         //navigationColor: '#fff'
     });
     $('#indexTextContainer').animate({
-        opacity: 'toggle'
+        opacity: 'show'
     }, 1000, 'linear');
 
     var windowW = $(window).width();

@@ -99,7 +99,6 @@ body {
     z-index: 80;
 }
 #indexTextContainer{
-    display: none;
     margin:20px auto;
     overflow:hidden;
     position: fixed;

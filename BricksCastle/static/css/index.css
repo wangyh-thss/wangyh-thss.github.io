@@ -1,0 +1,188 @@
+
+/* common */
+.title {
+    font-family: KaiTi, KaiTi_GB2312, STKaiti, 楷体, 楷体_GB2312;
+    font-size: 3em;
+    position: absolute;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.title a,
+.title a:visited {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.title:after {
+    content: "";
+    display: block;
+    background-color: #4D4D4E;
+    width: 100%;
+    height: 5px;
+    margin-top: 10px;
+}
+
+.content {
+    color: black;
+    font-size: 1em;
+    position: absolute;
+    font-family: Microsoft YaHei, 微软雅黑;
+    text-indent: 2em;
+    letter-spacing: 4px;
+    line-height: 1.7em;
+}
+
+
+/* page 1 */
+#splicing {
+    background-image: url(../image/index/1.jpg);
+    background-size: cover;
+}
+
+#splicing #logo {
+    position: absolute;
+    top: 2vh;
+    left: 2vw;
+    width: 15vw;
+}
+
+#splicing #navbar {
+    position: absolute;
+    top: 6vh;
+    left: 20vw;
+}
+
+#splicing #navbar .item {
+    display: inline-block;
+    text-align: center;
+    width: 12vw;
+    margin: 0 0.8vw;
+}
+
+#splicing #navbar .item img {
+    display: inline-block;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+#splicing #navbar .item a,
+#splicing #navbar .item a:hover,
+#splicing #navbar .item a:link,
+#splicing #navbar .item a:visited {
+    text-decoration: none;
+    font-family: SimHei STHeiti;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+#splicing #navbar .item a
+#splicing #navbar .item a:visited {
+    color: black;
+}
+
+#splicing #navbar .item a:hover {
+    color: #1F65C8;
+}
+
+#splicing .title {
+    top: 44vh;
+    left: 40vw;
+}
+
+#splicing .content {
+    top: 64vh;
+    left: 50vw;
+    width: 19vw;
+}
+
+
+
+/* page 2 */
+#friend {
+    background-image: url(../image/index/2.jpg);
+    background-size: cover;
+}
+
+#friend .title {
+    top: 29vh;
+    left: 23vw;
+}
+
+#friend .content {
+    top: 45vh;
+    left: 24vw;
+    width: 25vw;
+}
+
+/* page 3 */
+#animal {
+    background-image: url(../image/index/3.jpg);
+    background-size: cover;
+}
+
+#animal .title {
+    top: 60vh;
+    left: 72vw;
+}
+
+#animal .content {
+    top: 72vh;
+    left: 72vw;
+    width: 19vw;
+}
+
+/* page 4 */
+#city {
+    background-image: url(../image/index/4.jpg);
+    background-size: cover;
+}
+
+#city .title {
+    top: 15vh;
+    left: 61vw;
+}
+
+#city .content {
+    top: 31vh;
+    left: 61vw;
+    width: 21vw;
+}
+
+/* page 5 */
+#space {
+    background-image: url(../image/index/5.jpg);
+    background-size: cover;
+}
+
+#space .title {
+    top: 57vh;
+    left: 10vw;
+}
+
+#space .content {
+    top: 69vh;
+    left: 10vw;
+    width: 22vw;
+}
+
+/* page 6 */
+#military {
+    background-image: url(../image/index/6.jpg);
+    background-size: cover;
+}
+
+#military .title {
+    top: 7vh;
+    left: 67vw;
+}
+
+#military .content {
+    top: 23vh;
+    left: 67vw;
+    width: 21vw;
+}
+
+
+
