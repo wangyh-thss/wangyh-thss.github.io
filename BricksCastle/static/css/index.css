@@ -34,6 +34,10 @@
     line-height: 1.7em;
 }
 
+.section {
+    padding: 10px 0px;
+}
+
 
 /* page 1 */
 #splicing {
@@ -184,5 +188,26 @@
     width: 21vw;
 }
 
+#military #footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100vw;
+    height: 3vh;
+    background-color: #E4E8F9;
+    text-align: center;
+    padding: 2vh;
+}
 
+#military #footer a {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-size: 2vh;
+    line-height: 2vh;
+    font-family: Microsoft YaHei, 微软雅黑;
+}
+
+#military #footer a:hover {
+    color: #978458;
+}
 
