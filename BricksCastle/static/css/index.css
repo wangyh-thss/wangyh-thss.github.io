@@ -1,7 +1,7 @@
 
 /* common */
 .title {
-    font-family: KaiTi, KaiTi_GB2312, STKaiti, 楷体, 楷体_GB2312;
+    font-family:黑体;
     font-size: 3em;
     position: absolute;
     font-weight: bold;
@@ -26,10 +26,10 @@
 
 .content {
     color: black;
-    font-size: 1em;
+    font-size: 1.2em;
     position: absolute;
     font-family: Microsoft YaHei, 微软雅黑;
-    text-indent: 2em;
+    text-indent: 2.5em;
     letter-spacing: 4px;
     line-height: 1.7em;
 }
@@ -48,21 +48,21 @@
 #splicing #logo {
     position: absolute;
     top: 2vh;
-    left: 2vw;
+    left: 8vw;
     width: 15vw;
 }
 
 #splicing #navbar {
     position: absolute;
     top: 6vh;
-    left: 20vw;
+    left: 25vw;
 }
 
 #splicing #navbar .item {
     display: inline-block;
     text-align: center;
     width: 12vw;
-    margin: 0 0.8vw;
+    margin: 0 3vw;
 }
 
 #splicing #navbar .item img {
@@ -76,14 +76,16 @@
 #splicing #navbar .item a:link,
 #splicing #navbar .item a:visited {
     text-decoration: none;
-    font-family: SimHei STHeiti;
-    font-size: 1.2em;
+    font-family: 黑体;
+    font-size: 1.8em;
     cursor: pointer;
+    color: black;
 }
 
 #splicing #navbar .item a
 #splicing #navbar .item a:visited {
     color: black;
+	left:20px;
 }
 
 #splicing #navbar .item a:hover {
@@ -91,16 +93,15 @@
 }
 
 #splicing .title {
-    top: 44vh;
-    left: 40vw;
+    top: 42vh;
+    left: 48vw;
 }
 
 #splicing .content {
-    top: 64vh;
-    left: 50vw;
-    width: 19vw;
+    top: 56vh;
+    left: 48vw;
+    width: 21vw;
 }
-
 
 
 /* page 2 */
@@ -110,14 +111,14 @@
 }
 
 #friend .title {
-    top: 29vh;
-    left: 23vw;
+    top: 30vh;
+    left: 33vw;
 }
 
 #friend .content {
-    top: 45vh;
-    left: 24vw;
-    width: 25vw;
+    top: 44vh;
+    left: 33vw;
+    width: 24vw;
 }
 
 /* page 3 */
@@ -127,14 +128,14 @@
 }
 
 #animal .title {
-    top: 60vh;
-    left: 72vw;
+    top: 23vh;
+    left: 56vw;
 }
 
 #animal .content {
-    top: 72vh;
-    left: 72vw;
-    width: 19vw;
+    top: 37vh;
+    left: 56vw;
+    width: 20vw;
 }
 
 /* page 4 */
@@ -144,14 +145,14 @@
 }
 
 #city .title {
-    top: 15vh;
-    left: 61vw;
+    top: 19vh;
+    left: 57vw;
 }
 
 #city .content {
-    top: 31vh;
-    left: 61vw;
-    width: 21vw;
+    top: 33vh;
+    left: 57vw;
+    width: 25vw;
 }
 
 /* page 5 */
@@ -161,13 +162,13 @@
 }
 
 #space .title {
-    top: 57vh;
-    left: 10vw;
+    top: 61vh;
+    left: 18vw;
 }
 
 #space .content {
-    top: 69vh;
-    left: 10vw;
+    top: 75vh;
+    left: 18vw;
     width: 22vw;
 }
 
@@ -178,36 +179,25 @@
 }
 
 #military .title {
-    top: 7vh;
+    top: 11vh;
     left: 67vw;
 }
 
 #military .content {
-    top: 23vh;
+    top: 25vh;
     left: 67vw;
     width: 21vw;
 }
 
 #military #footer {
+	font-family:黑体;
     position: absolute;
     bottom: 0px;
     width: 100vw;
-    height: 3vh;
+    height: 8vh;
     background-color: #E4E8F9;
     text-align: center;
     padding: 2vh;
 }
 
-#military #footer a {
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
-    font-size: 2vh;
-    line-height: 2vh;
-    font-family: Microsoft YaHei, 微软雅黑;
-}
-
-#military #footer a:hover {
-    color: #978458;
-}
 

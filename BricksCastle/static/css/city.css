@@ -1,0 +1,206 @@
+body {
+    text-align: center;
+}
+
+.page {
+    position: relative;
+    width: 100%;
+}
+
+.title {
+    font-family: 黑体 SimHei STHeiti;
+    position: relative;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: left;
+}
+
+.title a,
+.title a:visited {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.title a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: #222222;
+}
+
+.image {
+    vertical-align: middle;
+    position: absolute;
+}
+
+.content {
+    color: white;
+    font-size: 1.5em;
+    position: absolute;
+    font-family: Microsoft YaHei, 微软雅黑;
+    text-indent: 2em;
+    line-height: 2em;
+    text-align: left;
+    font-weight: lighter;
+}
+
+#main {
+    background-image: url(../image/city/1.jpg);
+    background-size: cover;
+    width: 1440px;
+    height: 2500px;
+    margin: auto;
+}
+
+#logo {
+    position: absolute;
+    top: 2vh;
+    left: 8vw;
+    width: 15vw;
+}
+
+#navbar {
+    position: absolute;
+    top: 6vh;
+    left: 25vw;
+}
+
+#navbar .item {
+    display: inline-block;
+    text-align: center;
+    width: 12vw;
+    margin: 0 3vw;
+}
+
+#navbar .item img {
+    display: inline-block;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+#navbar .item a,
+#navbar .item a:hover,
+#navbar .item a:link,
+#navbar .item a:visited {
+    text-decoration: none;
+    font-family: 黑体;
+    font-size: 1.8em;
+    cursor: pointer;
+    color: black;
+}
+
+#navbar .item a
+#navbar .item a:visited {
+    color: black;
+    left:20px;
+}
+
+#navbar .item a:hover {
+    color: #1F65C8;
+}
+
+#page_title {
+    font-family: 黑体 SimHei STHeiti;
+    font-size: 4.5em;
+    position: relative;
+    top: 170px;
+}
+
+#project {
+    height: 521px;
+    top: 206px;
+}
+
+#project .title {
+    top: 10%;
+    left: 10%;
+}
+
+#project .content {
+    top: 25%;
+    left: 10%;
+    width: 32%;
+}
+
+#project .image {
+    right: 5%;
+}
+
+#police {
+    top: 224px;
+    height: 563px;
+}
+
+#police .title {
+    top: 10%;
+    left: 60%;
+}
+
+#police .content {
+    top: 25%;
+    left: 60%;
+    width: 32%;
+}
+
+#police .image {
+    left: 3%;
+    bottom: 5%;
+}
+
+#sea {
+    top: 241px;
+    height: 519px;
+}
+
+#sea .title {
+    top: 5%;
+    left: 35%;
+}
+
+#sea .content {
+    top: 20%;
+    left: 35%;
+    width: 32%;
+}
+
+#sea #left {
+    left: 5%;
+    top: 4%;
+}
+
+#sea #right {
+    right: 2%;
+    bottom: 2%;
+}
+
+#fire {
+    top: 241px;
+    height: 584px;
+}
+
+#fire .title {
+    top: 25%;
+    left: 50%;
+}
+
+#fire .content {
+    top: 40%;
+    left: 50%;
+    width: 32%;
+}
+
+#fire .image {
+    left: 6%;
+    bottom: 1%;
+}
+
+#footer {
+    font-family: 黑体 SimHei STHeiti;
+    position: relative;
+    width: 100%;
+    background-color: #F1C48C;
+    text-align: center;
+    top: 240px;
+    padding-top: 10px;
+    padding-bottom: 1px;
+}
