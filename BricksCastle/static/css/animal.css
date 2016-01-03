@@ -19,7 +19,7 @@
 
     position: relative;
 
-    color: white;
+    color: black;
 
     font-weight: bold;
 
@@ -46,7 +46,7 @@
 
     cursor: pointer;
 
-    color: #222222;
+    color: #ececec;
 
 }
 
@@ -62,7 +62,7 @@
 
 .content {
 
-    color: white;
+    color: black;
 
     font-size: 1.5em;
 
@@ -83,13 +83,13 @@
 
 #main {
 
-    background-image: url(../image/city/1.jpg);
+    background-image: url(../image/animal/1.jpg);
 
     background-size: cover;
 
     width: 1440px;
 
-    height: 2500px;
+    height: 2000px;
 
     margin: auto;
 
@@ -191,168 +191,268 @@
 
     position: relative;
 
-    top: 170px;
+    top: 190px;
 
 }
 
 
-#project {
+#yu {
 
-    height: 521px;
+    height: 380px;
 
-    top: 206px;
+    top: 300px;
 
 }
 
 
-#project .title {
+#yu .title {
+
+    top: 22%;
+
+    left: 5%;
+
+}
+
+
+#yu .content {
+
+    top: 40%;
+
+    left: 5%;
+
+    width: 28%;
+
+}
+
+
+#yu .image {
+
+    top:60%;
+
+    left: 15%;
+
+}
+
+
+#ye {
+
+    top: -20px;
+
+    height:500px;
+
+}
+
+
+#ye .title {
+
+    top: -5%;
+
+    left: 75%;
+
+}
+
+
+#ye .content {
 
     top: 10%;
 
-    left: 10%;
+    left: 75%;
+
+    width: 28%;
 
 }
 
 
-#project .content {
+#ye #right{
 
-    top: 25%;
-
-    left: 10%;
-
-    width: 32%;
-
-}
-
-
-#project .image {
-
-    right: 5%;
-
-}
-
-
-#police {
-
-    top: 224px;
-
-    height: 563px;
-
-}
-
-
-#police .title {
-
-    top: 10%;
-
-    left: 60%;
-
-}
-
-
-#police .content {
-
-    top: 25%;
-
-    left: 60%;
-
-    width: 32%;
-
-}
-
-
-#police .image {
-
-    left: 3%;
+    left: 40%;
 
     bottom: 5%;
 
 }
 
 
-#sea {
+#ye #left {
 
-    top: 241px;
+    left: 20%;
 
-    height: 519px;
+    top: 80%;
+
+}
+
+#chuang {
+
+    top: 200px;
+
+    height: 480px;
 
 }
 
 
-#sea .title {
+#chuang .title {
 
     top: 5%;
 
-    left: 35%;
+    left: 5%;
 
 }
 
 
-#sea .content {
+#chuang .content {
 
     top: 20%;
 
-    left: 35%;
+    left: 5%;
+
+    width: 29%;
+
+}
+
+#chuang .image {
+
+    left: 23%;
+
+}
+
+#kai{
+
+    top:-20%;
+
+    height: 300px;
+
+}
+
+
+#kai .title {
+
+    top:-10%;
+
+    left: 55%;
+
+}
+
+
+#kai .content {
+
+    top: 10%;
+
+    left: 55%;
+
+    width: 28%;
+
+}
+
+
+#kai .image {
+
+    top: 5%;
+
+    left: 83%;
+
+}
+
+
+#dong{
+
+    top: -15%;
+
+    height: 200px;
+
+}
+
+
+#dong .title {
+
+    top:0%;
+
+    left: 60%;
+
+}
+
+
+#dong .content {
+    top: 30%;
+
+    left: 60%;
+
+    width: 28%;
+
+}
+
+
+#dong .image {
+    top:-20%;
+    left: 75%;
+
+}
+
+#da{
+
+    top: -20%;
+
+    height: 200px;
+
+}
+
+
+#da .title {
+
+    top:-10%;
+
+    left: 10%;
+
+}
+
+
+#da .content {
+    top: 20%;
+
+    left: 10%;
 
     width: 32%;
 
 }
 
 
-#sea #left {
+#da .image {
 
     left: 5%;
 
-    top: 4%;
+}
+
+#sen{
+
+    top:-23%;
+
+    height: 20px;
 
 }
 
 
-#sea #right {
+#sen .title {
 
-    right: 2%;
+    top:0%;
 
-    bottom: 2%;
-
-}
-
-
-#fire {
-
-    top: 241px;
-
-    height: 584px;
+    left: 35%;
 
 }
 
 
-#fire .title {
+#sen .content {
+    top: 280%;
 
-    top: 25%;
+    left: 35%;
 
-    left: 50%;
-
-}
-
-
-#fire .content {
-    top: 40%;
-
-    left: 50%;
-
-    width: 32%;
+    width: 28%;
 
 }
 
 
-#fire .image {
-
-    left: 6%;
-
-    bottom: 1%;
+#sen .image {
+    top: -320%;
+    left: 55%;
 
 }
-
 
 #footer {
 
@@ -366,7 +466,7 @@
 
     text-align: center;
 
-    top: 240px;
+    top: -150px;
 
     padding-top: 10px;
 

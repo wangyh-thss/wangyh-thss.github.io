@@ -40,6 +40,25 @@
 
 
 /* page 1 */
+
+#nav-index:hover .menu,
+.menu :hover .menu {
+    display: block;
+}
+
+#nav-brick:hover .menu {
+    display: block;
+}
+
+.menu {
+    display: none;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    float: left;
+    width: 100%;
+}
+
 #splicing {
     background-image: url(../image/index/1.jpg);
     background-size: cover;
@@ -48,29 +67,30 @@
 #splicing #logo {
     position: absolute;
     top: 2vh;
-    left: 8vw;
+    left: 7vw;
     width: 15vw;
 }
 
 #splicing #navbar {
     position: absolute;
     top: 6vh;
-    left: 25vw;
+    left: 22vw;
 }
 
 #splicing #navbar .item {
     display: inline-block;
     text-align: center;
     width: 12vw;
-    margin: 0 3vw;
+    margin: 0 1.5vw;
 }
 
 #splicing #navbar .item img {
     display: inline-block;
     margin-bottom: 5px;
-    width: 100%;
+    width: 90%;
 }
 
+#splicing #navbar .menu a,
 #splicing #navbar .item a,
 #splicing #navbar .item a:hover,
 #splicing #navbar .item a:link,
@@ -80,12 +100,14 @@
     font-size: 1.8em;
     cursor: pointer;
     color: black;
+    display: block;
+    line-height: 1.3em;
 }
 
 #splicing #navbar .item a
 #splicing #navbar .item a:visited {
     color: black;
-	left:20px;
+    left:20px;
 }
 
 #splicing #navbar .item a:hover {
@@ -190,14 +212,15 @@
 }
 
 #military #footer {
-	font-family:黑体;
+    font-family:黑体;
     position: absolute;
-    bottom: 0px;
+    bottom: 1px;
     width: 100vw;
     height: 8vh;
-    background-color: #E4E8F9;
+    background-color: #bdbdbd;
     text-align: center;
     padding: 2vh;
+
 }
 
 

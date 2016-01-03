@@ -1,0 +1,89 @@
+#main {
+    background-image: url(../image/material/1.jpg);
+}
+
+.block {
+    border: 2px solid #757677;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+}
+
+.content {
+    color: black;
+    font-size: 1.3em;
+    font-family: Microsoft YaHei, 微软雅黑;
+    text-indent: 2em;
+    line-height: 2em;
+    text-align: left;
+    font-weight: lighter;
+}
+
+.subtitle {
+    font-size: 1.3em;
+    font-family: Microsoft YaHei, 微软雅黑;
+    text-align: left;
+    font-weight: lighter;
+}
+
+.block .title {
+    width: 100%;
+    background-color: #757677;
+    color: black;
+    font-size: 2em;
+    line-height: 2.4em;
+    text-align: left;
+}
+
+#content11 {
+    float: left;
+    width: 50%;
+    padding: 15px;
+}
+
+#content12 #tips1 {
+    line-height: 200px;
+    width: 60%;
+}
+
+#content12 #tips2 {
+    text-align: right;
+    padding-top: 30px;
+}
+
+#content12 {
+    width: 44%;
+    float: right;
+    padding-right: 40px;
+}
+
+#content12 img {
+    float: right;
+    width: 40%;
+}
+
+#content13 #text {
+    padding-left: 15px;
+    padding-right: 300px;
+    padding-top: 50px;
+}
+
+#content13 img {
+    float: right;
+    padding-right: 30px;
+}
+
+.half {
+    float: left;
+    width: 46%;
+    padding: 0 2%;
+}
+
+.half .content {
+    height: 150px;
+}
+
+.half img {
+    padding: 0px 15px;
+}

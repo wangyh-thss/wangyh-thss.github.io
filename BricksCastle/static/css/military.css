@@ -19,7 +19,7 @@
 
     position: relative;
 
-    color: white;
+    color: black;
 
     font-weight: bold;
 
@@ -46,7 +46,7 @@
 
     cursor: pointer;
 
-    color: #222222;
+    color: #ececec;
 
 }
 
@@ -62,7 +62,7 @@
 
 .content {
 
-    color: white;
+    color: black;
 
     font-size: 1.5em;
 
@@ -83,7 +83,7 @@
 
 #main {
 
-    background-image: url(../image/city/1.jpg);
+    background-image: url(../image/military/1.jpg);
 
     background-size: cover;
 
@@ -191,68 +191,32 @@
 
     position: relative;
 
-    top: 170px;
+    top: 190px;
 
 }
 
 
-#project {
+#kong{
 
-    height: 521px;
+    height: 400px;
 
     top: 206px;
 
 }
 
 
-#project .title {
+#kong .title {
 
-    top: 10%;
-
-    left: 10%;
-
-}
-
-
-#project .content {
-
-    top: 25%;
-
-    left: 10%;
-
-    width: 32%;
-
-}
-
-
-#project .image {
-
-    right: 5%;
-
-}
-
-
-#police {
-
-    top: 224px;
-
-    height: 563px;
-
-}
-
-
-#police .title {
-
-    top: 10%;
+    top: 20%;
 
     left: 60%;
 
 }
 
 
-#police .content {
+#kong .content {
 
-    top: 25%;
+    top: 35%;
 
     left: 60%;
 
@@ -261,98 +225,297 @@
 }
 
 
-#police .image {
+#kong .image {
+    top:10%;
+    right: 50%;
 
-    left: 3%;
+}
 
+
+#jian {
+
+    top:100px;
+
+    height: 390px;
+
+}
+
+
+#jian .title {
+
+    top: 5%;
+
+    left:8%;
+
+}
+
+
+#jian .content {
+
+    top: 20%;
+
+    left: 8%;
+
+    width: 40%;
+
+}
+
+
+#jian .image {
+
+    left: 60%;
+    top: -10%;
     bottom: 5%;
 
 }
 
 
-#sea {
+#tan {
 
-    top: 241px;
+    top: -40px;
 
-    height: 519px;
+    height: 360px;
 
 }
 
 
-#sea .title {
+#tan .title {
 
     top: 5%;
 
-    left: 35%;
+    left: 60%;
 
 }
 
 
-#sea .content {
+#tan .content {
 
     top: 20%;
 
-    left: 35%;
+    left: 60%;
 
-    width: 32%;
+    width: 29%;
+
+}
+
+#tan .image {
+
+    left: 40%;
+    top: -10%;
+    bottom: 5%;
 
 }
 
 
-#sea #left {
 
-    left: 5%;
+#ma {
 
-    top: 4%;
+    top:-150px;
 
-}
-
-
-#sea #right {
-
-    right: 2%;
-
-    bottom: 2%;
+    height: 350px;
 
 }
 
 
-#fire {
-
-    top: 241px;
-
-    height: 584px;
-
-}
-
-
-#fire .title {
+#ma .title {
 
     top: 25%;
 
-    left: 50%;
+    left: 8%;
 
 }
 
 
-#fire .content {
+#ma .content {
     top: 40%;
 
-    left: 50%;
+    left: 8%;
 
-    width: 32%;
+    width: 40%;
 
 }
 
 
-#fire .image {
+#ma .image {
 
-    left: 6%;
+    left: 60%;
+    top: 0%;
+    bottom: 1%;
 
+}
+#dao {
+
+    top:-250px;
+
+    height: 300px;
+
+}
+
+
+#dao .title {
+
+    top:10%;
+
+    left: 60%;
+
+}
+
+
+#dao .content {
+    top: 30%;
+
+    left:60%;
+
+    width: 29%;
+
+}
+
+
+#dao .image {
+    top:0%;
+    left:35%;
     bottom: 1%;
 
 }
 
+#zhi {
+
+    top:-350px;
+
+    height: 300px;
+
+}
+
+
+#zhi .title {
+
+    top:10%;
+
+    left: 8%;
+
+}
+
+
+#zhi .content {
+    top: 30%;
+
+    left:8%;
+
+    width: 40%;
+
+}
+
+
+#zhi .image {
+    top:0%;
+    left:60%;
+    bottom: 1%;
+
+}
+
+#hai {
+
+    top:-400px;
+
+    height: 320px;
+
+}
+
+
+#hai .title {
+
+    top:10%;
+
+    left: 60%;
+
+}
+
+
+#hai .content {
+    top: 30%;
+
+    left:60%;
+
+    width: 30%;
+
+}
+
+
+#hai .image {
+    top:-10%;
+    left:35%;
+    bottom: 1%;
+
+}
+
+#bu {
+
+    top:-470px;
+
+    height: 280px;
+
+}
+
+
+#bu .title {
+    top:10%;
+
+    left: 8%;
+
+}
+
+
+#bu .content {
+    top: 30%;
+
+    left:8%;
+
+    width: 40%;
+
+}
+
+
+#bu .image {
+    top:-20%;
+    left:60%;
+    bottom: 1%;
+
+}
+
+#du {
+
+    top:-510px;
+
+    height: 280px;
+
+}
+
+
+#du .title {
+
+    top:10%;
+
+    left: 60%;
+
+}
+
+
+#du .content {
+    top: 30%;
+
+    left:60%;
+
+    width: 30%;
+
+}
+
+
+#du .image {
+    top:-10%;
+    left:35%;
+    bottom: 1%;
+
+}
 
 #footer {
 
@@ -366,7 +529,7 @@
 
     text-align: center;
 
-    top: 240px;
+    top: -600px;
 
     padding-top: 10px;
 
